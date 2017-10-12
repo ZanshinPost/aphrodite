@@ -89,10 +89,10 @@ const StyleSheetTestUtils = {
  * Generate the Aphrodite API exports, with given `selectorHandlers` and
  * `useImportant` state.
  */
-const makeExports = (
+export default function makeExports(
     useImportant /* : boolean */,
     selectorHandlers /* : SelectorHandler[] */
-) => {
+) {
     return {
         StyleSheet: {
             ...StyleSheet,
@@ -136,6 +136,4 @@ const makeExports = (
                 useImportant, styleDefinitions, selectorHandlers);
         },
     };
-};
-
-module.exports = makeExports;
+}
